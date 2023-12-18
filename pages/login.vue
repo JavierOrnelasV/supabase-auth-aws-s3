@@ -1,7 +1,12 @@
+<script setup>
+import { useSessionStore } from "@/stores/session"
+const { session, newSession } = useSessionStore()
+</script>
+
 <template>
-  <form class="form">
-    <input type="text" placeholder="Username" />
-    <input type="password" placeholder="Password" />
+  <form class="form" @submit.prevent="newSession">
+    <input type="text" placeholder="Email" v-model="session.email" />
+    <input type="password" placeholder="Password" v-model="session.password" />
     <button type="submit">Login</button>
   </form>
 </template>

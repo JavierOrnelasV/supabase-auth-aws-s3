@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.470.0",
+    "@pinia/nuxt": "^0.5.1",
     "install": "^0.13.0"
   }
 }
